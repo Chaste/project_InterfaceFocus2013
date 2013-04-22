@@ -1,0 +1,8 @@
+			<EnterQuiescenceOxygenConcentration>8.9</EnterQuiescenceOxygenConcentration>
+			<LeaveQuiescenceOxygenConcentration>9.8</LeaveQuiescenceOxygenConcentration>
+			<CriticalQuiescentDuration>4000</CriticalQuiescentDuration>
+			<StemCellG1Duration>14</StemCellG1Duration>
+			<TransitCellG1Duration>2</TransitCellG1Duration>
+			<SDuration>5</SDuration>
+			<G2Duration>4</G2Duration>
+			<MDuration>1</MDuration>
