@@ -20,7 +20,7 @@ You will also need the source for the InterfaceFocus2013 project.  This can be d
 {{{
 svn checkout https://chaste.cs.ox.ac.uk/svn/chaste/projects/InterfaceFocus2013
 }}}
-in the projects folder of the Chaste directory. You will need to use the supplied username and password.
+in the projects folder of the Chaste directory. If you dont have a Chaste user account you can use the username anonymous and your email for the password.
 
 Now the project should be installed, and everything should compile and run correctly. 
 You can now run the tests or simulations, or create your own test suites.
