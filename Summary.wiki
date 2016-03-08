@@ -4,7 +4,7 @@ This section contains pages generated automatically from the source code accompa
 Figueredo et al (2013) "On-Lattice Agent-based Simulation of Populations of Cells within the Open-Source Chaste Framework", Royal Society Interface Focus. 
 doi:  10.1098/rsfs.2012.0081
 
-The code to run single simulations, which was used to produce the figures in the paper, can be found here [wiki:PaperTutorials/InterfaceFocus2013/TestCompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOde TestCompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOdeLiteratePaper.hpp]
+The code to run single simulations, which was used to produce the figures in the paper, can be found here [wiki:PaperTutorials/InterfaceFocus2013/CompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOde TestCompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOde.hpp]
 
 Before looking at this, you may wish to look at some of the [wiki:UserTutorials basic user tutorials] for Chaste.
 
@@ -29,7 +29,7 @@ You can now run the tests or simulations, or create your own test suites.
 There are two folders - `src` and `test`.
  1. The `src` folder contains the classes necesary to run the simulation. These define the aditional forces and boundary conditions not in the core chaste code.
  1. The `test` folder contains:
-  * [wiki:PaperTutorials/InterfaceFocus2013/TestCompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOde TestCompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOdeLiteratePaper.hpp] - this file can be run to generate the results in Figure 7
+  * [wiki:PaperTutorials/InterfaceFocus2013/CompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOde TestCompareOwen2011OxygenBasedCellCycleModelsWithAndWithoutOde.hpp] - this file can be run to generate the results in the paper.
  == Running tests ==
 You can then run tests and simulations with,
 {{{
