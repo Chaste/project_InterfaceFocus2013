@@ -36,6 +36,22 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef TESTMULTIPLECABASEDCELLPOPULATIONUSINGPDES_HPP_
 #define TESTMULTIPLECABASEDCELLPOPULATIONUSINGPDES_HPP_
 
+/*
+ * = Comparing Chaste and `VascTum` =
+ *
+ * In this test suite we we crun the simulations presented in Figueredo et al (2013)
+ * "On-Lattice Agent-based Simulation of Populations of Cells within the Open-Source Chaste Framework"
+ * doi:  10.1098/rsfs.2012.0081
+ *
+ * Details of the model can be found in the papoer.
+ *
+ *
+ * == Code overview ==
+ *
+ * The first thing to do is to include the necessary header files.
+ */
+
+
 #include <cxxtest/TestSuite.h>
 
 // Must be included before other cell_based headers
@@ -44,14 +60,10 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "CellwiseSourcePde.hpp"
 #include "ConstBoundaryCondition.hpp"
 #include "PetscSetupAndFinalize.hpp"
-//#include "ReplicatableVector.hpp"
 #include "NumericFileComparison.hpp"
-//#include "FunctionalBoundaryCondition.hpp"
 #include "AveragedSourcePde.hpp"
 
-
 #include "PottsBasedCellPopulation.hpp"
-
 #include "AbstractCellPopulation.hpp"
 #include "HoneycombMeshGenerator.hpp"
 #include "PottsMeshGenerator.hpp"
@@ -71,8 +83,15 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "Owen2011MultipleCaUpdateRule.hpp"
 #include "VasctumCellKiller.hpp"
 
-class TestMultipleCaBasedCellPopulationWithPdes : public AbstractCellBasedTestSuite
+
+/*
+ * Make the test suite
+ */
+class TestMultipleCaBasedCellPopulationWithPdesLiteratePaper : public AbstractCellBasedTestSuite
 {
+/*
+ * This code just allows the output of simulaton run times.
+ */
 private:
 
     double mLastStartTime;
@@ -91,7 +110,9 @@ private:
 
 public:
 
-
+    /*
+     * This first test simulates a population of non proliferating cells with Oxygen diffusion
+     */
     void TestPdesOnMultipleCaPopulationWithStripOfNonProliferatingCells() throw (Exception)
     {
 		EXIT_IF_PARALLEL;
@@ -187,6 +208,9 @@ public:
 
    }
 
+    /*
+     * This test simulates a population of proliferating cells, initially lying in a strip, with Oxygen diffusion
+     */
 	void TestPdesOnMultipleCaPopulationWithStripOfProliferatingCells() throw (Exception)
 	{
 		EXIT_IF_PARALLEL;
@@ -267,6 +291,9 @@ public:
 		simulator.Solve();
 	}
 
+    /*
+     * This test simulates a population of non proliferating cells with Oxygen diffusion where each lattice site is occupied with a cell
+     */
     void TestPdesOnMultipleCaPopulationWithACellAtEachLatticeSite() throw (Exception)
     {
 		EXIT_IF_PARALLEL;
@@ -358,8 +385,11 @@ public:
 			// Test that PDE solver is working correctly
 			TS_ASSERT_DELTA(cell_iter->GetCellData()->GetItem("oxygen"), analytic_solution, 1e-1);
 		}
-   }
+    }
 
+    /*
+     * This test simulates a population of proliferating cells with Oxygen diffusion using mixed boundary conditions.
+     */
 	void TestPdesForSpheroidGrowthWithMixedBoundaryConditions() throw (Exception)
 	{
 		EXIT_IF_PARALLEL;
@@ -455,6 +485,9 @@ public:
 		simulator.Solve();
 	}
 
+    /*
+     * This test simulates a population of proliferating cells with Oxygen diffusion and dirichlet boundary conditions
+     */
 	void TestPdesForSpheroidGrowthWithDirichletBoundaryConditions() throw (Exception)
 	{
 		EXIT_IF_PARALLEL;
