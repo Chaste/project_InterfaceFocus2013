@@ -5,8 +5,8 @@ Figueredo et al (2013) "On-Lattice Agent-based Simulation of Populations of Cell
 doi:  10.1098/rsfs.2012.0081
 
 The code to run single simulations, which was used to produce the figures in the paper, can be found here 
-[wiki:PaperTutorials/InterfaceFocus2013/TestCaWithMultipleMutationStatesLiteratePaper TestCaWithMultipleMutationStatesLiteratePaper.hpp]
-and here [wiki:PaperTutorials/InterfaceFocus2013/TestCaBasedCellPopulationUsingPdesLiteratePaper TestCaBasedCellPopulationUsingPdesLiteratePaper.hpp]
+[wiki:PaperTutorials/InterfaceFocus2013/CaWithMultipleMutationStates TestCaWithMultipleMutationStatesLiteratePaper.hpp]
+and here [wiki:PaperTutorials/InterfaceFocus2013/CaBasedCellPopulationUsingPdes TestCaBasedCellPopulationUsingPdesLiteratePaper.hpp]
 
 Before looking at this, you may wish to look at some of the [wiki:UserTutorials basic user tutorials] for Chaste.
 
@@ -31,8 +31,8 @@ You can now run the tests or simulations, or create your own test suites.
 There are two folders - `src` and `test`.
  1. The `src` folder contains the classes necesary to run the simulation. These define the aditional ell cycle models etc. that  not in the core chaste code.
  1. The `test` folder contains:
-  * [wiki:PaperTutorials/InterfaceFocus2013/TestCaWithMultipleMutationStatesLiteratePaper TestCaWithMultipleMutationStatesLiteratePaper.hpp] - this file can be run to generate the results in the paper.
-  * [wiki:PaperTutorials/InterfaceFocus2013/TestCaBasedCellPopulationUsingPdesLiteratePaper TestCaBasedCellPopulationUsingPdesLiteratePaper.hpp] - this file can be run to generate the results in the paper.
+  * [wiki:PaperTutorials/InterfaceFocus2013/CaWithMultipleMutationStates TestCaWithMultipleMutationStatesLiteratePaper.hpp] - this file can be run to generate the results in the paper.
+  * [wiki:PaperTutorials/InterfaceFocus2013/CaBasedCellPopulationUsingPdes TestCaBasedCellPopulationUsingPdesLiteratePaper.hpp] - this file can be run to generate the results in the paper.
  == Running tests ==
 You can then run tests and simulations with,
 {{{
